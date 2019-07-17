@@ -1,11 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import './index.css';
 import MenuView from './MenuView';
+import KitchenView from './KitchenView';
 import * as serviceWorker from './serviceWorker';
 
+
+const routing = (
+    <Router>
+    <div>
+      <Route exact path="/" component={MenuView} />
+      <Route path="/Kitchen" component={KitchenView} />
+      
+    </div>
+  </Router>
+)
 ReactDOM.render(
-    <MenuView />, 
+    routing, 
     document.getElementById('root')
 );
 
