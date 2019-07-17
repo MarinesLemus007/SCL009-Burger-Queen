@@ -15,9 +15,8 @@ class Order extends React.Component{
         
       return  (
         <div>
-            
-            {this.props.list.map(element=><OrderElement name={element.name} value={element.value} key={element.id} id={element.id} delete={this.props.delete}/>)}
-        <p>Total{this.total()}</p>
+          {this.props.list.map(element=><OrderElement name={element.name} value={element.value} key={element.id} id={element.id} delete={this.props.delete}/>)}
+          <p>Total ${this.total()}</p>
         </div>
       
       )

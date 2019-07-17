@@ -26,3 +26,7 @@ section{
   .btn:hover{
     background: #7E57C2;
   }
+
+  .elementMenuBtn{
+    color: yellow;
+  }

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import MenuView from './MenuView';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <App />, 
+    <MenuView />, 
     document.getElementById('root')
 );
 
