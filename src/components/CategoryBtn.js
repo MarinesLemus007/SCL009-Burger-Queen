@@ -4,11 +4,6 @@ import '../App.css';
 
 
 class CategoryBtn extends React.Component{
-    constructor(props) {
-        super(props);
-       
-      }
-
 
     render(){
       return <button onClick={() => this.props.view(this.props.name)} className='btn'>{this.props.name}</button>

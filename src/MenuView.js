@@ -59,7 +59,7 @@ if(category ==="Desayunos"){
     <section>
       <div className="buttonday">
         {Object.keys(Menu).map(btn=>
-           <CategoryBtn name={btn} view={this.view}/>)}
+           <CategoryBtn name={btn} view={this.view} key={btn}/>)}
         <ul>
         {this.state.Desayunos && Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
         {this.state.Almuerzos && <LunchBtn add={this.add}/>}

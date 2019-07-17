@@ -10,8 +10,8 @@ const Navbar = () => (
             <li><img src={logo} alt="" /></li>
             <li><Link to="/">MENÚ</Link></li>
             <li><Link to="/Kitchen">Cocina</Link></li>
-            <li><a href="http://index.js">ORDENES</a></li>
-            <li><a href="http://index.js">HISTORIAL</a></li>
+            <li><Link to="/">ORDENES</Link></li>
+            <li><Link to="/">HISTORIAL</Link></li>
         </ul>
     </nav>
 </header>

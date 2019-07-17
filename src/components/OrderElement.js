@@ -1,9 +1,9 @@
 import React from 'react';
 class OrderElement extends React.Component{
-    constructor(props) {
-        super(props);
+    // constructor(props) {
+    //     super(props);
         
-      }
+    //   }
 
 
     render(){
