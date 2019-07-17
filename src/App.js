@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import './index.css';
+import './navbar.css';
+import './btn.css';
+import Navbar from './navbar';
 import Btn from './Btn'
 import Menu from './data/menu.json'
 import Order from './Order';
@@ -35,21 +39,20 @@ class App extends React.Component{
 
   render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Pruebita
-        </p>
-      {Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
-      <div>
-      <Order  list = {this.state.list} delete={this.delete}/>
+<>
+    <Navbar/>
+    <section>
+      <div className="buttonday">
+        <ul>
+          {Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
+        </ul>
       </div>
-
-      </header>
-
-    </div>
-  );
+      <div>
+        <Order list = {this.state.list} delete={this.delete}/>
+      </div>
+  </section>
+</>
+  )
 }
 }
 
