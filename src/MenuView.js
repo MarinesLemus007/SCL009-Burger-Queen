@@ -7,6 +7,7 @@ import Navbar from './navbar';
 import Btn from './components/Btn'
 import Menu from './data/menu.json'
 import Order from './components/Order';
+import OrdenName from './components/ordenName';
 import CategoryBtn from './components/CategoryBtn'
 import LunchBtn from './components/LunchBtn'
 
@@ -68,6 +69,7 @@ if(category ==="Desayunos"){
       <div>
         <Order list = {this.state.list} delete={this.delete}/>
       </div>
+      <OrdenName/>
   </section>
 </>
   )
