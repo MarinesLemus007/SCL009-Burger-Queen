@@ -1,0 +1,17 @@
+{
+    "Desayunos":[
+        {"name":"Café Americano ",
+        "value":500},
+        {"name":"Café con Leche",
+        "value":700},
+        {"name":"Jugo Natural",
+        "value":700},
+        {"name":"Sandwich jamón-queso",
+        "value":1000}
+    ],
+    "Almuerzos":[
+        
+    ]
+    
+}
+
