@@ -13,10 +13,11 @@ class MenuView extends React.Component{
   
   constructor(props){
     super(props)
-    this.state = {list: [],category:null};
+    this.state = {list: [],category:null, client:""};
     this.add = this.add.bind(this);
     this.delete = this.delete.bind(this);
     this.view = this.view.bind(this);
+    this.changeClient = this.changeClient.bind(this)
     this.index = 0; // id de cada elemento de orden creado
   }
   
@@ -52,6 +53,12 @@ class MenuView extends React.Component{
     }
   }
 
+  changeClient(el){
+    this.setState({
+        client: el.target.value
+    })
+}
+
   render(){
     return (
       <>
@@ -66,7 +73,7 @@ class MenuView extends React.Component{
             </div>
           </section>  
           <aside className="side-content">
-            <OrderName/>
+            <OrderName changeClient={this.changeClient} client={this.state.client}/>
             <div>
               <Order list = {this.state.list} delete={this.delete}/>
             </div>
