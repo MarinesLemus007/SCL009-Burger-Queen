@@ -24,15 +24,19 @@
         {"name":"Onion Rings",
         "value":500}
     ],
-    "Bebestibles":[
+    "Bebestibles":{
+        "Agua":[
     
         {"name":"Agua 500ml",
         "value":500},
         {"name":"Agua 750ml",
-        "value":800},
+        "value":800}
+        ],
+        "Gaseosa":[
         {"name":"Gaseosa 500ml",
         "value":700},
         {"name":"Gaseosa 750ml",
         "value":1000}
         ]
+    }
 }}
