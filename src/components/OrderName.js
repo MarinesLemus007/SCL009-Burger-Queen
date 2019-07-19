@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class OrdenName extends Component{
+class OrderName extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -29,4 +29,4 @@ class OrdenName extends Component{
     }
 }
 
-export default OrdenName
+export default OrderName
