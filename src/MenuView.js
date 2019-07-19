@@ -1,8 +1,5 @@
 import React from 'react';
-import './App.css';
 import './index.css';
-import './navbar.css';
-import './btn.css';
 import Navbar from './navbar';
 import Btn from './components/Btn'
 import Menu from './data/menu.json'
@@ -54,26 +51,27 @@ if(category ==="Desayunos"){
   }
 
   render(){
-  return (
-<>
-    <Navbar/>
-    <section>
-      <div className="buttonday">
-        {Object.keys(Menu).map(btn=>
-           <CategoryBtn name={btn} view={this.view} key={btn}/>)}
-        <ul>
-        {this.state.Desayunos && Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
-        {this.state.Almuerzos && <LunchBtn add={this.add}/>}
-        </ul>
-      </div>
-      <div>
-        <Order list = {this.state.list} delete={this.delete}/>
-      </div>
-      <OrdenName/>
-  </section>
-</>
-  )
-}
+    return (
+      <>
+        <Navbar/>
+          <section className="content">
+            <div className="buttonday">
+              {Object.keys(Menu).map(btn=> <CategoryBtn name={btn} view={this.view} key={btn}/>)}
+              <ul>
+                {this.state.Desayunos && Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
+                {this.state.Almuerzos && <LunchBtn add={this.add}/>}
+              </ul>
+            </div>
+          </section>  
+          <aside className="side-content">
+            <OrdenName/>
+            <div>
+              <Order list = {this.state.list} delete={this.delete}/>
+            </div>
+          </aside>
+      </>
+    )
+  }
 }
 
 export default MenuView;

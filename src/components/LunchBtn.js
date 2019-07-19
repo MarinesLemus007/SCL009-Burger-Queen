@@ -1,8 +1,7 @@
 import React from 'react';
 import Btn from './Btn'
 import Menu from '../data/menu.json'
-import '../btn.css';
-
+import '../index.css';
 
 class LunchBtn extends React.Component{
     

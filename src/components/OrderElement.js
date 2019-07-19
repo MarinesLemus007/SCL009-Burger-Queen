@@ -8,8 +8,7 @@ class OrderElement extends React.Component{
 
     render(){
       return (<div>
-          <p>{this.props.name} {this.props.value}</p>
-          <button onClick={() => this.props.delete(this.props.id)}>X</button>
+          <p>{this.props.name} {this.props.value} <button className="buttonDelete" onClick={() => this.props.delete(this.props.id)}>X</button></p>
       </div>)
     }
 }
