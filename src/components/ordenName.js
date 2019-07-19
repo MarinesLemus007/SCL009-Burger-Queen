@@ -17,17 +17,14 @@ class OrdenName extends Component{
 
     render(){
         return (
-            <aside>
-                <form>
-                    <div className="ordenform">
-                         <label>ORDEN</label>
-                        <input type="text"
-                        onChange={this.changeClient}
-                        />
-                        <input className ="buttonOrden" type="submit" value="enviar"/>
-                    </div>
-                </form>
-            </aside>
+            <form>
+                <div className="ordenform">
+                    <label>ORDEN</label>
+                    <input type="text" onChange={this.changeClient} />
+                    <input className ="buttonOrden" type="submit" value="enviar"/>
+                </div>
+            </form>
+        
         )
     }
 }
