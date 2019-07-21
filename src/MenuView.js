@@ -78,11 +78,16 @@ class MenuView extends React.Component{
               
             </section>  
             <aside className="side-content-col">
-              ORDEN
+              <div className="line-order">
+                <p>ORDEN</p>
+              </div>
               <OrderName changeClient={this.changeClient} client={this.state.client}/>
-              <div>
+              <div className="order-content">
                 <Order list = {this.state.list} delete={this.delete}/>
               </div>
+              <footer className="footer-side">
+                <button className="btn-aside">ENVIAR</button>
+              </footer>
             </aside>
           </div>
       </>
