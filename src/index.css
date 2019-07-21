@@ -17,7 +17,7 @@ header {
 }
 
 
-.buttonDelete{
+.buttonDelete, .btn-aside{
   background: #FF8B3E;
 }
 
@@ -96,6 +96,10 @@ header {
 /* /////// */
 .name-input{
   padding: 5px 4px 2px 2px;
+  border-style: none;
+  background-color: #C4C4C4;
+  width: 80%;
+  font-size: x-large;
 }
 
 .button-content-col{
@@ -103,6 +107,8 @@ header {
 
 .side-content-col{
   width:40%;
+  margin: 25px;
+  background: white;
 }
 .category-btn-row{
   padding:0;
@@ -152,3 +158,35 @@ header {
   padding:20px;
 }
 
+.order-content{
+  text-align: right;
+  padding: 0px 30px 0px 30px;
+  border-bottom: 2px solid #C4C4C4;
+}
+
+.order-content p{
+  background: #C4C4C4;
+  padding: 10px;
+}
+
+.client-input{
+  padding: 0px 30px 0px;
+}
+.line-order p{
+  text-align: center;
+  color: #442681;
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-side{
+  padding: 30px 30px 30px;
+  text-align: right;
+}
+
+.btn-aside{
+  padding: 20px;
+  color: white;
+  font-family: Rubik;
+}

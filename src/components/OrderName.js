@@ -4,7 +4,7 @@ class OrderName extends Component{
   
       render() {
         return (
-          <form>
+          <form className="client-input">
             <label>
               Cliente:
               <input className="name-input"value={this.props.client} onChange={this.props.changeClient} />
