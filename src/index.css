@@ -12,14 +12,6 @@ header {
 }
 
 
-.btn{
-  width: 150px;
-  height: 90px;
-  color: #F1F1F1;
-  background: #8A8889;
-  border-radius: 25px;
-}
-
 .button-content-col ul {
   margin: 0;
   list-style: none;
@@ -40,25 +32,13 @@ header {
   color: yellow;
 }
 
-.BtnMenu{
-  width: 100px;
-  height: 80px;
-  color: #F1F1F1;
-  background: #B085F5;
-  margin: 5px;
-  margin-top: 25px;
-}
-
-.BtnMenu:hover{
-  background: #7E57C2;
-}
 
 .buttonDelete{
   background: #FF8B3E;
 }
 
 
-.menu-nav-row,.menu-ul-row,.content-row{
+.menu-nav-row,.menu-ul-row,.content-row,.category-btn-row,.item-btn-row{
   display: flex;
   flex-direction:row;
   width: 100%;
@@ -137,6 +117,46 @@ header {
 .button-content-col{
   width:60%;}
 
-  .side-content-col{
-    width:40%;
-  }
+.side-content-col{
+  width:40%;
+}
+
+.category-btn-row{
+  padding:0;
+  margin:0;
+  margin-top:3%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item-btn-row{
+  padding:0;
+  margin:0;
+  margin-top:2%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.btn,.item-btn{
+  padding: 30px;
+  color: #F1F1F1;
+  background-color: #8A8889;
+  border-radius: 25px;
+  border-style:none;
+  margin:10px;
+  flex:1;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+}
+
+.item-btn{
+  
+  padding: 40px;
+  background: #B085F5;
+  margin-top: 3px;
+  border-radius: 0%;
+  text-align: left;
+  
+}
+
+.item-btn:hover{
+  background: #7E57C2;
+}

@@ -30,7 +30,7 @@ class MenuView extends React.Component{
   //
   delete(id){
     let newList = [...this.state.list] //crea copia de list para no cambiar directamente el estado de un componente
-    for( var i = 0; i < newList.length; i++){ //recorre la newList y consigue la posicion de cada elemento,si coincide
+    for( var i = 0; i < newList.length; i++){ //recorre la newList y consigue la id de cada elemento,si coincide
       if ( newList[i].id === id) { //con la misma id que se le pasa borra este elemento (desde posicion i, elimina 1 elemento)
         newList.splice(i, 1); 
       }
@@ -39,16 +39,18 @@ class MenuView extends React.Component{
   }
 
   view(category){ // dependiendo de la categoria cambia el estado, este metodo se pasa como propiedad al boton
-    if(category ==="Desayunos"){
+    category = category.toLowerCase()
+    console.log(category);
+    if(category ==="desayunos"){
       this.setState({
-        Desayunos:true,
-        Almuerzos:false
+        desayunos:true,
+        almuerzos:false
       })
     }
-    if(category ==="Almuerzos"){
+    if(category ==="almuerzos"){
       this.setState({
-        Desayunos:false,
-        Almuerzos:true
+        desayunos:false,
+        almuerzos:true
       })
     }
   }
@@ -65,14 +67,19 @@ class MenuView extends React.Component{
         <Navbar/>
           <div className="content-row">
             <section className="button-content-col">
-              {Object.keys(Menu).map(btn=> <CategoryBtn name={btn} view={this.view} key={btn}/>)}
-              <ul>
-                {this.state.Desayunos && Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
-                {this.state.Almuerzos && <LunchBtn add={this.add}/>}
-              </ul>
+              <div className="category-btn-row">
+                {Object.keys(Menu).map(btn=> <CategoryBtn name={btn.toUpperCase()} view={this.view} key={btn}/>)}
+              </div>
+              
+                {this.state.desayunos &&
+                  <div className="item-btn-row"> {Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
+                  </div> }
+                {this.state.almuerzos && <LunchBtn add={this.add}/>}
+              
               
             </section>  
             <aside className="side-content-col">
+              ORDEN
               <OrderName changeClient={this.changeClient} client={this.state.client}/>
               <div>
                 <Order list = {this.state.list} delete={this.delete}/>
