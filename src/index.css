@@ -12,22 +12,6 @@ header {
 }
 
 
-.button-content-col ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
-
-.button-content-col li{
-  text-align: center;
-}
-
-
-.btn:hover{
-  background: #7E57C2;
-}
-
 .elementMenuBtn{
   color: yellow;
 }
@@ -120,7 +104,6 @@ header {
 .side-content-col{
   width:40%;
 }
-
 .category-btn-row{
   padding:0;
   margin:0;
@@ -135,6 +118,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .btn,.item-btn{
   padding: 30px;
   color: #F1F1F1;
@@ -147,16 +131,22 @@ header {
   font-weight: bold;
 }
 
-.item-btn{
-  
-  padding: 40px;
-  background: #B085F5;
-  margin-top: 3px;
-  border-radius: 0%;
-  text-align: left;
-  
+.btn:hover{
+  background: #7E57C2;
 }
 
 .item-btn:hover{
   background: #7E57C2;
 }
+.item-btn{
+  padding: 40px;
+  background: #B085F5;
+  margin-top: 3px;
+  border-radius: 0%;
+  text-align: left;
+}
+
+#lunch button{
+  padding:20px;
+}
+

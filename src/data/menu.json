@@ -10,13 +10,22 @@
         "value":1000}
     ],
     "Almuerzos":{
-        "Hamburguesas":[
-                {   "name":"Simple",
+        "Hamburguesas":{
+            "Simple":[
+                {  "name":"Simple Res",
                     "value":1500},
-
-                {   "name":"Doble",
-                    "value":3500
-    }],
+                {   "name":"Simple Pollo",
+                    "value":1500},
+                {   "name":"Simple Vegetariana",
+                    "value":1500}],
+            "Doble":[
+                {  "name":"Doble Res",
+                    "value":2500},
+                {   "name":"Doble Pollo",
+                    "value":2500},
+                {   "name":"Doble Vegetariana",
+                    "value":2500}]
+        },
     "Acompañamientos":[
     
         {"name":"Papas Fritas",

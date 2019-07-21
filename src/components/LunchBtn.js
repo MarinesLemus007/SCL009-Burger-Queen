@@ -8,10 +8,14 @@ class LunchBtn extends React.Component{
     render(){
         return (
             <>
-        <div className="item-btn-row">
+            
+        <div id="lunch" className="item-btn-row">
             <p>Hamburguesas</p>
             <div className="item-btn-row">
-                {Menu.Almuerzos.Hamburguesas.map(btn=><Btn name={btn.name} value={btn.value} add={this.props.add} key={btn.name}/>)}
+                {Menu.Almuerzos.Hamburguesas.Simple.map(btn=><Btn name={btn.name} value={btn.value} add={this.props.add} key={btn.name}/>)}
+            </div>
+            <div className="item-btn-row">
+                {Menu.Almuerzos.Hamburguesas.Doble.map(btn=><Btn name={btn.name} value={btn.value} add={this.props.add} key={btn.name}/>)}
             </div>
             <p>Acompañamientos</p>
             <div className="item-btn-row">
