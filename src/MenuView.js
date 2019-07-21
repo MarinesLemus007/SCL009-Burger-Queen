@@ -63,21 +63,22 @@ class MenuView extends React.Component{
     return (
       <>
         <Navbar/>
-          <section className="content">
-            <div className="buttonday">
+          <div className="content-row">
+            <section className="button-content-col">
               {Object.keys(Menu).map(btn=> <CategoryBtn name={btn} view={this.view} key={btn}/>)}
               <ul>
                 {this.state.Desayunos && Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
                 {this.state.Almuerzos && <LunchBtn add={this.add}/>}
               </ul>
-            </div>
-          </section>  
-          <aside className="side-content">
-            <OrderName changeClient={this.changeClient} client={this.state.client}/>
-            <div>
-              <Order list = {this.state.list} delete={this.delete}/>
-            </div>
-          </aside>
+              
+            </section>  
+            <aside className="side-content-col">
+              <OrderName changeClient={this.changeClient} client={this.state.client}/>
+              <div>
+                <Order list = {this.state.list} delete={this.delete}/>
+              </div>
+            </aside>
+          </div>
       </>
     )
   }
