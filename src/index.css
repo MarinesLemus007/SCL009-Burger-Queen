@@ -190,3 +190,11 @@ header {
   color: white;
   font-family: Rubik;
 }
+
+.btn-aside-clear{
+  padding: 20px;
+  color: black;
+  font-family: Rubik;
+  background: white;
+  margin-right: 40px;
+}
