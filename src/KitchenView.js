@@ -11,7 +11,7 @@ class KitchenView extends React.Component{
 
 
     componentDidMount() {
-        db.collection("ordenes").get().then(querySnapshot => {
+        db.collection("ordenes").onSnapshot((querySnapshot)=>{
            this.setState({
                 data: querySnapshot.docs.map(doc =>{
                    
