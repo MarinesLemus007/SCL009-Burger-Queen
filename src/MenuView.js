@@ -110,6 +110,7 @@ let idClient =this.state.client + Date.now();
                 {this.state.almuerzos && <LunchBtn add={this.add}/>}  
             </section>  
             <aside className="side-content-col">
+            <div className="footer-content">
               <div className="line-order">
                 <p>ORDEN</p>
               </div>
@@ -118,9 +119,15 @@ let idClient =this.state.client + Date.now();
                 <Order list = {this.state.list} delete={this.delete}/>
               </div>
               <footer className="footer-side">
-              <button className="btn-aside-clear" onClick={this.clearOrder}>LIMPIAR</button>
-              <button className="btn-aside" onClick={this.saveOrder}>ENVIAR </button>
+                <div className="btn-clear-col">
+                  <button className="btn-aside-clear" onClick={this.clearOrder}>LIMPIAR</button>
+                </div>
+                <div className="btn-send-col">
+                  <button className="btn-aside" onClick={this.saveOrder}>ENVIAR </button>
+                </div>
+                
               </footer>
+              </div>
             </aside>
           </div>
       </>
