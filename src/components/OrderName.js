@@ -14,4 +14,4 @@ class OrderName extends Component{
       }
     }
 
-export default OrderName
+export default OrderName;
