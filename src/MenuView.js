@@ -44,7 +44,7 @@ class MenuView extends React.Component{
 
   view(category){ // dependiendo de la categoria cambia el estado, este metodo se pasa como propiedad al boton
     category = category.toLowerCase()
-    console.log(category);
+    
     if(category ==="desayunos"){
       this.setState({
         desayunos:true,
@@ -82,8 +82,8 @@ let idClient =this.state.client + Date.now();
   id: idClient,
   client: this.state.client,
   list: this.state.list,
-  ready: false,
-  deliveded: false,
+  not_ready: true,
+  not_deliveded: true,
   time: Date.now() 
   }
 

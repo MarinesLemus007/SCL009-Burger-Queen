@@ -1,26 +1,23 @@
 import React from 'react';
 class OrderTemplate extends React.Component{
-    // constructor(props) {
-    //     super(props);
+   render(){
+    return (
+         this.props.data !== undefined ? this.props.data.map(el=>
+            el.data.not_ready && 
+            
+            <div className='order-kitchen'>
+                <p>cliente : {el.data.client}</p>
+                {el.data.list.map(e=> <p>{e.name}</p>)}
+                <button onClick={()=>this.props.changeReadyStatus(el.data.id)}>Listo</button>
+                
+            
+            </div> 
         
-    //   }
+            ) : <p></p>
 
-    render(){
-     
-     return (
-            <div>
-                <label>
-                Cliente:
-                <p>{this.props.client}</p>
-                </label>
-                <p> {this.props.name} ${this.props.value} </p>
-                <div>
-                <p>HORA DE INGRESO: {this.props.time} <button>LISTO</button></p> 
-                </div>
-            </div>
-        )
-
-    }
+       )
+   }
 }
-
 export default OrderTemplate;
+
+
