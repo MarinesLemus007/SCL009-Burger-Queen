@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   background: #F1F1F1;
 }
 
@@ -22,7 +22,7 @@ header {
 }
 
 
-.menu-nav-row,.menu-ul-row,.content-row,.category-btn-row,.item-btn-row{
+.menu-nav-row,.menu-ul-row,.content-row,.category-btn-row,.item-btn-row,.client-input{
   display: flex;
   flex-direction:row;
   width: 100%;
@@ -94,13 +94,6 @@ header {
 }
 
 /* /////// */
-.name-input{
-  padding: 5px 4px 2px 2px;
-  border-style: none;
-  background-color: #C4C4C4;
-  width: 80%;
-  font-size: x-large;
-}
 
 .button-content-col{
   width:60%;}
@@ -139,14 +132,15 @@ header {
   font-weight: bold;
 }
 
-.btn:hover{
+.btn:hover,.item-btn:hover{
   background: #7E57C2;
 }
 
-.item-btn:hover{
-  background: #7E57C2;
-}
+
 .item-btn{
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(68, 2, 82, 0.4);
+  -moz-box-shadow: 0px 2px 4px 1px rgba(68, 2, 82, 0.4);
+  box-shadow: 0px 2px 4px 1px rgba(68, 2, 82, 0.4);
   padding: 40px;
   background: #B085F5;
   margin-top: 3px;
@@ -158,9 +152,10 @@ header {
   padding:20px;
 }
 
-.order-content{
+.order-content, .client-input{
+  width: 90%;
+  align-self: center;
   text-align: right;
-  padding: 0px 30px 0px 30px;
   border-bottom: 2px solid #C4C4C4;
 }
 
@@ -170,12 +165,26 @@ header {
 }
 
 .client-input{
-  padding: 0px 30px 0px;
+  border:0px;
+}
+.client-input label{
+  margin-right: 3px;
+  margin-top: 10px;
+}
+.name-input{
+  padding: 5px 0px 5px 0px;
+  border-style: none;
+  background-color: #C4C4C4;
+  width: 70%;
+  font-size: x-large;
+  flex:1;
+}
+.name-input,.client-input,.line-order p,.btn-aside,.btn-aside-clear{
+  font-family: 'Rubik', sans-serif;
 }
 .line-order p{
   text-align: center;
   color: #442681;
-  font-family: Rubik;
   font-weight: bold;
   font-size: 20px;
 }
@@ -188,13 +197,13 @@ header {
 .btn-aside{
   padding: 20px;
   color: white;
-  font-family: Rubik;
+  font-weight: bold;
 }
 
 .btn-aside-clear{
   padding: 20px;
   color: black;
-  font-family: Rubik;
   background: white;
   margin-right: 40px;
+  font-weight: bold;
 }

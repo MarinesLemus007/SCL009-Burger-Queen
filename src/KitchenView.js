@@ -11,7 +11,7 @@ class KitchenView extends React.Component{
 
 
     componentDidMount() {
-        db.collection("ordenes").onSnapshot((querySnapshot)=>{
+        db.collection("ordenes").limit(10).onSnapshot((querySnapshot)=>{
            this.setState({
                 data: querySnapshot.docs.map(doc =>{
                    
@@ -37,8 +37,7 @@ class KitchenView extends React.Component{
             <p>{e.name} {e.value}</p>)}
         <p>cliente : {el.data.client}</p>
         <p>su pedido es </p>
-        </div>) : <p>error</p>}
-           "oli"
+        </div>) : <p></p>}
         </div>
     </>)
     }

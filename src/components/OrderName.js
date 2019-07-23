@@ -6,9 +6,9 @@ class OrderName extends Component{
         return (
           <form className="client-input">
             <label>
-              Cliente:
-              <input placeholder="Nombre del cliente" className="name-input"value={this.props.client} onChange={this.props.changeClient} />
+              Cliente :
             </label>
+            <input placeholder="Nombre de cliente" className="name-input"value={this.props.client} onChange={this.props.changeClient} />
           </form>
         );
       }
