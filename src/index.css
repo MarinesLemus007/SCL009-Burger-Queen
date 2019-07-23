@@ -207,3 +207,8 @@ header {
   margin-right: 40px;
   font-weight: bold;
 }
+
+.order-kitchen{
+  background-color: aqua;
+  margin: 10px;
+}

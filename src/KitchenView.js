@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './navbar';
 import {db} from './data/firebase';
+import OrderTemplate from './components/OrderTemplate'
 
 class KitchenView extends React.Component{
     constructor(props) {
@@ -11,7 +12,7 @@ class KitchenView extends React.Component{
 
 
     componentDidMount() {
-        db.collection("ordenes").limit(10).onSnapshot((querySnapshot)=>{
+        db.collection("ordenes").orderBy("time","asc").limit(5).onSnapshot((querySnapshot)=>{
            this.setState({
                 data: querySnapshot.docs.map(doc =>{
                    
@@ -31,13 +32,7 @@ class KitchenView extends React.Component{
             <Navbar/>
        
         <div>
-        {data && data !== undefined ? data.map(el=>
-        <div>
-            {el.data.list.map(e=>
-            <p>{e.name} {e.value}</p>)}
-        <p>cliente : {el.data.client}</p>
-        <p>su pedido es </p>
-        </div>) : <p></p>}
+        <OrderTemplate data={data}/>
         </div>
     </>)
     }
