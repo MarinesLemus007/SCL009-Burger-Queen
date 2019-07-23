@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './navbar';
+import OrderTemplate from './components/OrderTemplate';
 import {db} from './data/firebase';
 
 class KitchenView extends React.Component{
@@ -25,22 +26,16 @@ class KitchenView extends React.Component{
 
     render(){
         const {data} = this.state;
-     
+     console.log(data);
         return (
             <>
-            <Navbar/>
-       
-        <div>
-        {data && data !== undefined ? data.map(el=>
-        <div>
-            {el.data.list.map(e=>
-            <p>{e.name} {e.value}</p>)}
-        <p>cliente : {el.data.client}</p>
-        <p>su pedido es </p>
-        </div>) : <p>error</p>}
-           "oli"
-        </div>
-    </>)
+                <Navbar/>
+                {data && data !== undefined ?
+                data.map(el=> el.data.list.map(e=>
+                <OrderTemplate client={el.data.client} name={e.name} value={e.value} time={el.data.time}/>))
+                : <p>error</p>}
+            </>
+        )    
     }
 }
 

@@ -7,11 +7,11 @@ class OrderName extends Component{
           <form className="client-input">
             <label>
               Cliente:
-              <input placeholder="Nombre del cliente" className="name-input"value={this.props.client} onChange={this.props.changeClient} />
+              <input placeholder="Nombre del cliente" className="name-input" value={this.props.client} onChange={this.props.changeClient} />
             </label>
           </form>
         );
       }
     }
 
-export default OrderName
+export default OrderName;
