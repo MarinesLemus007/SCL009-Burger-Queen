@@ -10,6 +10,8 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "eslint": "eslint --ext .js ./",
+    "pretest": "npm run eslint",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -29,5 +31,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "eslint-plugin-react": "^7.14.3"
   }
 }

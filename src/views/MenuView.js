@@ -23,13 +23,15 @@ class MenuView extends React.Component{
     this.clearOrder = this.clearOrder.bind(this);
     this.saveOrder = this.saveOrder.bind(this);
     this.index = 0; // id de cada elemento de orden creado
+    this.count= 1;
   }
-  
   //añade un producto({name,value,id} a la orden(list -> array de objetos [el index comienza en 0 y se utiliza como id]
   add(valueToAdd,nameToAdd){
     this.setState({list: this.state.list.concat([{name : nameToAdd, value:valueToAdd, id:this.index}])});
     this.index ++;
   }
+
+  
 
   //
   delete(id){
