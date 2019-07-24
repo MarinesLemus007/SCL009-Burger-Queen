@@ -104,12 +104,12 @@ let idClient =this.state.client + Date.now();
                 {Object.keys(Menu).map(btn=> <CategoryBtn name={btn.toUpperCase()} state={btn === 'Desayunos' ? this.state.desayunos : this.state.almuerzos} view={this.view} key={btn}/>)}
               </div>
                 {this.state.desayunos &&
-                  <div className="item-btn-row"> {Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
-                  </div> }
+                <div className="item-btn-row"> {Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
+                </div> }
                 {this.state.almuerzos && <LunchBtn add={this.add}/>}  
             </section>  
             <aside className="side-content-col">
-            <div className="footer-content">
+            <div className="aside-content">
               <div className="line-order">
                 <p>ORDEN</p>
               </div>

@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import OrderTemplate from '../components/OrderTemplate';
 import {db} from '../data/firebase';
 
+
 class KitchenView extends React.Component{
     constructor(props) {
         super(props);
