@@ -56,7 +56,6 @@ header {
 .menu-ul-row li{
   font-weight: bold;
   display: block;
-  background-color: #8A8889;
   text-align: center;
 
 }
@@ -64,17 +63,16 @@ header {
 .menu-ul-row li a:link{
   display: block;
   padding: 15px 10px 15px 10px;
-  background-color: #8A8889;
+  
   text-decoration: none;
-  width: 100%;
   color:white;
 }
 
-.menu-ul-row li a:hover{
+.menu-ul-row li a:hover,.btn-selected-navbar{
   background-color: #F1F1F1;
 }
 
-.menu-ul{
+.menu-ul,.btn-selected-navbar{
   flex:1;
   margin: 0px 20px;
 }

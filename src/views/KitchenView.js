@@ -7,7 +7,7 @@ import {db} from '../data/firebase';
 class KitchenView extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {selectedNavbar:'kitchen'}
        this.changeReadyStatus= this.changeReadyStatus.bind(this);
       }
 
@@ -45,7 +45,7 @@ class KitchenView extends React.Component{
      
         return (
             <>
-            <Navbar/>
+            <Navbar state={this.state.selectedNavbar}/>
        
         <div>
         

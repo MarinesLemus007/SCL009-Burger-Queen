@@ -15,7 +15,7 @@ class MenuView extends React.Component{
   constructor(props){
     super(props)
    
-    this.state = {list: [], client:""};
+    this.state = {list: [], client:"",selectedNavbar:'menu'};
     this.add = this.add.bind(this);
     this.delete = this.delete.bind(this);
     this.view = this.view.bind(this);
@@ -97,7 +97,7 @@ let idClient =this.state.client + Date.now();
   render(){
     return (
       <>
-        <Navbar/>
+        <Navbar state={this.state.selectedNavbar} />
           <div className="content-row">
             <section className="button-content-col">
               <div className="category-btn-row">
