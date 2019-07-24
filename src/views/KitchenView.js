@@ -13,7 +13,7 @@ class KitchenView extends React.Component{
 
 
     componentDidMount() {
-        db.collection("ordenes").orderBy("time","asc").limit(5).onSnapshot((querySnapshot)=>{
+        db.collection("ordenes").where("not_ready", "==", true).orderBy("time","asc").limit(5).onSnapshot((querySnapshot)=>{
            this.setState({
                 data: querySnapshot.docs.map(doc =>{
                    
@@ -26,18 +26,13 @@ class KitchenView extends React.Component{
     }
 
     changeReadyStatus(id) {
-        
-        this.state.data.map(el=> 
-            {if (el.data.id === id){
-                
+        this.state.data.map(el=> {
+            if (el.data.id === id){
                 db.collection("ordenes").doc(id).update({
                     not_ready: false
                 })
-                
-            }}
-        
-        )
-  
+            }
+        })
     }
 
     render(){
@@ -46,16 +41,12 @@ class KitchenView extends React.Component{
         return (
             <>
             <Navbar state={this.state.selectedNavbar}/>
-       
-        <div>
-        
-        <p>ORDENES</p>
-              <OrderTemplate changeReadyStatus={this.changeReadyStatus} data={data}/>
-        
-        
-        
-        </div>
-    </>)
+            <div>
+                <p>ORDENES</p>
+                <OrderTemplate changeReadyStatus={this.changeReadyStatus} data={data}/>
+            </div>
+            </>
+        )
     }
 }
 

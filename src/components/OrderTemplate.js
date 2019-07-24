@@ -5,10 +5,12 @@ class OrderTemplate extends React.Component{
          this.props.data !== undefined ? this.props.data.map(el=>
             el.data.not_ready && 
             
-            <div className='order-kitchen'>
-                <p>cliente : {el.data.client}</p>
-                {el.data.list.map(e=> <p>{e.name}</p>)}
-                <button onClick={()=>this.props.changeReadyStatus(el.data.id)}>Listo</button>
+            <div className='order-kitchen' key={el.data.id}>
+                <p>Cliente : {el.data.client}</p>
+                <p>Fecha :  {new Date(el.data.time).toLocaleDateString()} {new Date(el.data.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+                {el.data.list.map(e=> 
+                 <p key={e.name+e.id}>{e.name}</p> )}
+                <button  onClick={()=>this.props.changeReadyStatus(el.data.id)}>Listo</button>
                 
             
             </div> 
