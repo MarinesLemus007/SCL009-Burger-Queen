@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from './navbar';
-import OrderTemplate from './components/OrderTemplate';
-import {db} from './data/firebase';
+import Navbar from '../components/Navbar';
+import OrderTemplate from '../components/OrderTemplate';
+import {db} from '../data/firebase';
 
-class OrdersView extends React.Component{
+class KitchenView extends React.Component{
     constructor(props) {
         super(props);
         this.state = {}
@@ -12,7 +12,7 @@ class OrdersView extends React.Component{
 
 
     componentDidMount() {
-        db.collection("ordenes").orderBy("time","asc").onSnapshot((querySnapshot)=>{
+        db.collection("ordenes").orderBy("time","asc").limit(5).onSnapshot((querySnapshot)=>{
            this.setState({
                 data: querySnapshot.docs.map(doc =>{
                    

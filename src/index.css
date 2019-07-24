@@ -123,7 +123,7 @@ header {
   flex-wrap: wrap;
 }
 
-.btn,.item-btn{
+.btn,.item-btn,.selected-category-btn{
   padding: 30px;
   color: #F1F1F1;
   background-color: #8A8889;
@@ -135,7 +135,7 @@ header {
   font-weight: bold;
 }
 
-.btn:hover,.item-btn:hover{
+.item-btn:hover,.selected-category-btn{
   background: #7E57C2;
 }
 

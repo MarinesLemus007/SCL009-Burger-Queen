@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './img/logo.png';
+import logo from '../img/logo.png';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 const Navbar = () => (

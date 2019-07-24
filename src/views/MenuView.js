@@ -1,13 +1,13 @@
 import React from 'react';
-import {db} from './data/firebase';
-import './index.css';
-import Navbar from './navbar';
-import Btn from './components/Btn'
-import Menu from './data/menu.json'
-import Order from './components/Order';
-import OrderName from './components/OrderName';
-import CategoryBtn from './components/CategoryBtn'
-import LunchBtn from './components/LunchBtn'
+import {db} from '../data/firebase';
+import '../index.css';
+import Navbar from '../components/Navbar';
+import Btn from '../components/Btn'
+import Menu from '../data/menu.json'
+import Order from '../components/Order';
+import OrderName from '../components/OrderName';
+import CategoryBtn from '../components/CategoryBtn'
+import LunchBtn from '../components/LunchBtn'
 
 
 class MenuView extends React.Component{
@@ -15,7 +15,7 @@ class MenuView extends React.Component{
   constructor(props){
     super(props)
    
-    this.state = {list: [],category:null, client:""};
+    this.state = {list: [], client:""};
     this.add = this.add.bind(this);
     this.delete = this.delete.bind(this);
     this.view = this.view.bind(this);
@@ -42,27 +42,27 @@ class MenuView extends React.Component{
    this.setState({list:newList}) //remplaza la list con la newList modificada
   }
 
-  view(category){ // dependiendo de la categoria cambia el estado, este metodo se pasa como propiedad al boton
-    category = category.toLowerCase()
+view(category){ // dependiendo de la categoria cambia el estado, este metodo se pasa como propiedad al boton
+  category = category.toLowerCase()
     
-    if(category ==="desayunos"){
-      this.setState({
-        desayunos:true,
-        almuerzos:false
+  if(category ==="desayunos"){
+    this.setState({
+      desayunos:true,
+      almuerzos:false
       })
-    }
-    if(category ==="almuerzos"){
-      this.setState({
-        desayunos:false,
-        almuerzos:true
+  }
+  if(category ==="almuerzos"){
+    this.setState({
+      desayunos:false,
+      almuerzos:true
       })
     }
   }
 
-  changeClient(el){
-    this.setState({
-        client: el.target.value
-    })
+changeClient(el){
+  this.setState({
+    client: el.target.value
+  })
 }
 
 clearOrder(){
@@ -70,7 +70,6 @@ clearOrder(){
     list: [],
     client:""
   })
-
 }
 
 saveOrder(){
@@ -102,7 +101,7 @@ let idClient =this.state.client + Date.now();
           <div className="content-row">
             <section className="button-content-col">
               <div className="category-btn-row">
-                {Object.keys(Menu).map(btn=> <CategoryBtn name={btn.toUpperCase()} view={this.view} key={btn}/>)}
+                {Object.keys(Menu).map(btn=> <CategoryBtn name={btn.toUpperCase()} state={btn === 'Desayunos' ? this.state.desayunos : this.state.almuerzos} view={this.view} key={btn}/>)}
               </div>
                 {this.state.desayunos &&
                   <div className="item-btn-row"> {Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}
