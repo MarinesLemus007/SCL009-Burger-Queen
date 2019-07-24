@@ -121,7 +121,7 @@ header {
  
 }
 
-.btn-delete, .btn-aside{
+.btn-delete, .btn-aside, .btn-order-template{
   background: #FF8B3E;
 }
 
@@ -192,7 +192,7 @@ header {
   font-size: x-large;
   flex:1;
 }
-.name-input,.client-input,.line-order p,.btn-aside,.btn-aside-clear{
+.name-input,.client-input,.line-order p,.btn-aside,.btn-aside-clear, .btn-order-template{
   font-family: 'Rubik', sans-serif;
   
 }
@@ -210,14 +210,14 @@ header {
   width:60%;
   justify-items: flex-end;
 }
-.btn-aside,.btn-aside-clear{
+.btn-aside,.btn-aside-clear,.btn-order-template{
   padding: 20px;
   font-weight: bold;
   margin:10px;
   border-style:none;
 }
 
-.btn-aside{
+.btn-aside, .btn-order-template{
   color: white;
 }
 
@@ -228,8 +228,13 @@ header {
 }
 
 .order-kitchen{
-  background-color: aqua;
+  background-color: white;
   margin: 10px;
+  padding: 5px 30px 0px;
+}
+
+.template-order{
+  text-align: right;
 }
 
 @media only screen and (max-width: 600px) {

@@ -10,9 +10,9 @@ class OrderTemplate extends React.Component{
                 <p>Fecha :  {new Date(el.data.time).toLocaleDateString()} {new Date(el.data.time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
                 {el.data.list.map(e=> 
                  <p key={e.name+e.id}>{e.name}</p> )}
-                <button  onClick={()=>this.props.changeReadyStatus(el.data.id)}>Listo</button>
-                
-            
+                <div className='template-order'>
+                    <button className='btn-order-template' onClick={()=>this.props.changeReadyStatus(el.data.id)}>Listo</button>
+                </div>
             </div> 
         
             ) : <p></p>
