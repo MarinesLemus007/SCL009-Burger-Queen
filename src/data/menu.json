@@ -26,6 +26,13 @@
                 {   "name":"Doble Vegetariana",
                     "value":2500}]
         },
+    "Agregados":[
+    
+            {"name":"+ Queso",
+            "value":500},
+            {"name":"+ Huevo",
+            "value":500}
+        ],
     "Acompañamientos":[
     
         {"name":"Papas Fritas",

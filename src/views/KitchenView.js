@@ -26,7 +26,7 @@ class KitchenView extends React.Component{
     }
 
     changeReadyStatus(id) {
-        this.state.data.map(el=> {
+        this.state.data.forEach(el=> {
             if (el.data.id === id){
                 db.collection("ordenes").doc(id).update({
                     not_ready: false
