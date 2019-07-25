@@ -11,8 +11,8 @@ import OrdersReadyView from './views/OrdersReadyView';
 const routing = (
     <Router>
     <div>
-      <Route exact path="/" component={MenuView} />
-      <Route path="/Kitchen" component={KitchenView} />
+      <Route exact path={process.env.PUBLIC_URL + '/'} component={MenuView} />
+      <Route path='/Kitchen' component={KitchenView} />
       <Route path="/OrdersReady" component={OrdersReadyView} />
       
     </div>
