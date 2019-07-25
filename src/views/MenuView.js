@@ -121,7 +121,6 @@ class MenuView extends React.Component{
     client: this.state.client,
     list: this.state.list,
     not_ready: true,
-    not_deliveded: true,
     time: Date.now() 
     }
 

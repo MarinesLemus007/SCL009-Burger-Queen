@@ -29,7 +29,9 @@ class KitchenView extends React.Component{
         this.state.data.forEach(el=> {
             if (el.data.id === id){
                 db.collection("ordenes").doc(id).update({
-                    not_ready: false
+                    not_ready: false,
+                    time_ready:Date.now(),
+                    not_delivered: true,
                 })
             }
         })
@@ -42,7 +44,7 @@ class KitchenView extends React.Component{
             <>
             <Navbar state={this.state.selectedNavbar}/>
             <div>
-                <p>ORDENES</p>
+                <p>Pedidos para cocinar</p>
                 <OrderTemplate changeReadyStatus={this.changeReadyStatus} data={data}/>
             </div>
             </>
