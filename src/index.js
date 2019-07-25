@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom"
 import './index.css';
 import MenuView from './views/MenuView';
 import KitchenView from './views/KitchenView';
-import Order from './components/Order';
 import * as serviceWorker from './serviceWorker';
 import OrdersReadyView from './views/OrdersReadyView';
 

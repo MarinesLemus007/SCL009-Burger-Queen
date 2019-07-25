@@ -17,8 +17,7 @@ class Order extends React.Component{
         <div>
           {this.props.list.map(element=><OrderElement count={element.count} name={element.name} value={element.value} key={element.id} id={element.id} delete={this.props.delete}/>)}
           <p className='p-total-order'>Total ${this.total()}</p>
-        </div>
-           
+        </div>       
       )
     }
 }
