@@ -140,7 +140,7 @@ class MenuView extends React.Component{
           <div className="content-row">
             <section className="button-content-col">
               <div className="category-btn-row">
-                {Object.keys(Menu).map(btn=> <CategoryBtn name={btn.toUpperCase()} state={btn === 'Desayunos' ? this.state.desayunos : this.state.almuerzos} view={this.view} key={btn}/>)}
+                {Object.keys(Menu).map(btn=> <CategoryBtn  className ="btnCategory" name={btn.toUpperCase()} state={btn === 'Desayunos' ? this.state.desayunos : this.state.almuerzos} view={this.view} key={btn}/>)}
               </div>
                 {this.state.desayunos &&
                 <div className="item-btn-row"> {Menu.Desayunos.map(btn=><Btn name={btn.name} value={btn.value} add={this.add} key={btn.name}/>)}

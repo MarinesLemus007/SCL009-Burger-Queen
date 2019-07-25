@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryBtn Debería devolver categoria desayuno al clickear   1`] = `[Function]`;
+
+exports[`Debería devolver categoria almuerzo al clickear  1`] = `ShallowWrapper {}`;
