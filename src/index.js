@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import './index.css';
-import MenuView from './MenuView';
-import KitchenView from './KitchenView';
-import Order from './OrderView';
+import MenuView from './views/MenuView';
+import KitchenView from './views/KitchenView';
+import Order from './components/Order';
 import * as serviceWorker from './serviceWorker';
 
 

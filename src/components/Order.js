@@ -14,14 +14,11 @@ class Order extends React.Component{
     render(){
         
       return  (
-        <div className="card border-primary ">
-          
-          <div class="card-body">
-          ORDEN
-          {this.props.list.map(element=><OrderElement name={element.name} value={element.value} key={element.id} id={element.id} delete={this.props.delete}/>)}
-          <h5 class="card-title">Total ${this.total()}</h5>
+        <div>
+          {this.props.list.map(element=><OrderElement count={element.count} name={element.name} value={element.value} key={element.id} id={element.id} delete={this.props.delete}/>)}
+          <p className='p-total-order'>Total ${this.total()}</p>
         </div>
-        </div>      
+           
       )
     }
 }
