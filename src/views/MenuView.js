@@ -165,7 +165,6 @@ class MenuView extends React.Component{
                 <div className="btn-send-col">
                   <button className="btn-aside" onClick={this.saveOrder}>ENVIAR </button>
                 </div>
-                
               </footer>
               </div>
             </aside>
