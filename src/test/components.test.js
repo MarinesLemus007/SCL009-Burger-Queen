@@ -3,7 +3,7 @@ import { configure , shallow , mount , Enzyme} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import MenuView from '../views/MenuView'
 import LunchBtn from '../components/LunchBtn'
-import Btn from '../Btn'
+import Btn from '../components/Btn'
 import CategoryBtn from '../components/CategoryBtn';
 import OrderTemplate from '../components/OrderTemplate'
 import Order from '../components/Order';
