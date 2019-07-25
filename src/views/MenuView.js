@@ -15,7 +15,7 @@ class MenuView extends React.Component{
   constructor(props){
     super(props)
    
-    this.state = {list: [], client:"",selectedNavbar:'menu'};
+    this.state = {list: [], client:"",selectedNavbar:'menu',errorMsg:''};
     this.add = this.add.bind(this);
     this.delete = this.delete.bind(this);
     this.view = this.view.bind(this);
@@ -41,19 +41,20 @@ class MenuView extends React.Component{
   }
 
   addCheeseorEgg(eggOrCheese){
-    if ( eggOrCheese === '+ Queso') {
     let newList = [...this.state.list] 
     let lastItem = newList[newList.length-1];
+    if(lastItem ===undefined){
+      return
+    }
+    if ( eggOrCheese === '+ Queso') {
+    
               lastItem.name = lastItem.name+" + Queso"
               lastItem.value = lastItem.value + 500;
               return this.setState({list:newList})
     }
-    let newList = [...this.state.list] 
-    let lastItem = newList[newList.length-1];
               lastItem.name = lastItem.name+" + Huevo"
               lastItem.value = lastItem.value + 500;
              this.setState({list:newList})
-
   }
   
 
@@ -101,11 +102,17 @@ class MenuView extends React.Component{
   clearOrder(){
     this.setState({
       list: [],
-      client:""
+      client:"",
+      errorMsg:""
     })
   }
 
   saveOrder(){
+    if(this.state.client === ""){
+      this.setState({
+        errorMsg:'Debe ingresar un nombre.'}) 
+      return 
+    }
     let idClient =this.state.client + Date.now();
 
     let data=
@@ -114,7 +121,6 @@ class MenuView extends React.Component{
     client: this.state.client,
     list: this.state.list,
     not_ready: true,
-    not_deliveded: true,
     time: Date.now() 
     }
 
@@ -144,8 +150,10 @@ class MenuView extends React.Component{
             <aside className="side-content-col">
             <div className="aside-content">
               <div className="line-order">
-                <p>ORDEN</p>
+                <p>PEDIDO</p>
+                <p className='error-msg'>{this.state.errorMsg}</p>
               </div>
+              
               <OrderName changeClient={this.changeClient} client={this.state.client}/>
               <div className="order-content">
                 <Order list = {this.state.list} delete={this.delete}/>
@@ -157,7 +165,6 @@ class MenuView extends React.Component{
                 <div className="btn-send-col">
                   <button className="btn-aside" onClick={this.saveOrder}>ENVIAR </button>
                 </div>
-                
               </footer>
               </div>
             </aside>

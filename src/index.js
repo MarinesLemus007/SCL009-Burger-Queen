@@ -6,15 +6,15 @@ import MenuView from './views/MenuView';
 import KitchenView from './views/KitchenView';
 import Order from './components/Order';
 import * as serviceWorker from './serviceWorker';
+import OrdersReadyView from './views/OrdersReadyView';
 
 
 const routing = (
     <Router>
     <div>
       <Route exact path="/" component={MenuView} />
-      <Route exact path="/Kitchen" component={KitchenView} />
-      <Route  path ="/Order" component={Order} />
-      
+      <Route path="/Kitchen" component={KitchenView} />
+      <Route path="/OrdersReady" component={OrdersReadyView} />
       
     </div>
   </Router>

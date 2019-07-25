@@ -263,9 +263,6 @@ header {
 }
 
 
-.buttonDelete{
-  background: #FF8B3E;
-}
 @media only screen and (max-width: 600px) {
   .side-content-col,.button-content-col {
     flex-direction: row;
