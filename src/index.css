@@ -14,13 +14,14 @@ header {
 
 
 .menu-nav-row,.menu-ul-row,.content-row,.category-btn-row,.item-btn-row,.client-input,.footer-side,
-.content-item-btn-row{
+.content-item-btn-row,.order-element-row{
   display: flex;
   flex-direction:row;
   width: 100%;
 }
 .menu-left-col,.menu-center-col,.button-content-col,.side-content-col,.menu-right-col,.btn-clear-col,
-.btn-send-col,.aside-content{
+.btn-send-col,.aside-content,.order-element-count-col,.order-element-name-col,.order-element-value-col,
+.order-element-btn-col{
   display:flex;
   flex-direction:column;
   width: 100%;
@@ -128,7 +129,7 @@ header {
 .btn-delete{
   border-style:none;
   padding:5px 10px;
-  margin-left:3px;
+  margin: 0px 10px 0px 5px;
 }
 
 .btn,.btn-item,.btn-selected-category{
@@ -166,15 +167,33 @@ header {
 .order-content, .client-input{
   width: 90%;
   align-self: center;
-  text-align: right;
   border-bottom: 2px solid #C4C4C4;
 }
 
 .order-content > div > .order-element p{
-  background: #C4C4C4;
+  
   padding: 10px;
 }
 
+.order-element-row{
+  background-color: #C4C4C4;
+  margin:10px 0px 10px 0px;
+}
+.order-element-count-col,.order-element-name-col,.order-element-value-col,.order-element-btn-col{
+  align-self: center;
+}
+.order-element-btn-col,.order-element-count-col{
+  text-align: center;
+  width:20%;
+}
+.order-element-value-col{
+  width: 20%;
+  margin-left: 10px;
+}
+.p-total-order{
+  text-align: right;
+
+}
 
 .client-input{
   border:0px;

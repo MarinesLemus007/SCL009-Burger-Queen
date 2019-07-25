@@ -13,7 +13,7 @@ class KitchenView extends React.Component{
 
 
     componentDidMount() {
-        db.collection("ordenes").where("not_ready", "==", true).orderBy("time","asc").limit(5).onSnapshot((querySnapshot)=>{
+        db.collection("ordenes").where("not_ready", "==", true).orderBy("time","asc").limit(6).onSnapshot((querySnapshot)=>{
            this.setState({
                 data: querySnapshot.docs.map(doc =>{
                    

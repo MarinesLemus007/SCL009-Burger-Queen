@@ -18,6 +18,10 @@ class LunchBtn extends React.Component{
                 <div className="item-btn-row">
                     {Menu.Almuerzos.Hamburguesas.Doble.map(btn=><Btn name={btn.name} value={btn.value} add={this.props.add} key={btn.name}/>)}
                 </div>
+                <div className="item-btn-row">
+                    {Menu.Almuerzos.Agregados.map(btn=>
+                    <button className="btn-item" onClick={() => this.props.addCheeseorEgg(btn.name)}key={btn.name}>{btn.name.toUpperCase()} </button>)}
+                </div>
             </div>
             <div className="content-item-btn-row">
                 <h4>Acompañamientos</h4>
