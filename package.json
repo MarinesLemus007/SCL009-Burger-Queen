@@ -10,8 +10,6 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "eslint": "eslint --ext .js ./",
-    "pretest": "npm run eslint",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
