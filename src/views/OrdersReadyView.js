@@ -26,6 +26,7 @@ class OrdersReadyView extends React.Component{
             if (el.data.id === id){
                 db.collection("ordenes").doc(id).update({
                     not_delivered: false,
+                    record: true,
                     time_delivered:Date.now(),
                 })
             }
