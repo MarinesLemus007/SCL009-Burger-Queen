@@ -256,6 +256,7 @@ header {
   text-align: right;
 }
 
+
 @media only screen and (max-width: 600px) {
   .side-content-col,.button-content-col {
     flex-direction: row;
