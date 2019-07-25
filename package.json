@@ -14,9 +14,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eslint": "eslint --ext .js ./",
     "pretest": "npm run eslint"
   },
+  "homepage": "https://cloiw.github.io/SCL009-Burger-Queen",
+
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -35,6 +39,9 @@
   "devDependencies": {
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "eslint-plugin-react": "^7.14.3"
+    "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.0.1"
   }
+
+
 }
