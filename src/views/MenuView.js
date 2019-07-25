@@ -45,8 +45,13 @@ class MenuView extends React.Component{
   delete(id){
     let newList = [...this.state.list] //crea copia de list para no cambiar directamente el estado de un componente
     for( var i = 0; i < newList.length; i++){ //recorre la newList y consigue la id de cada elemento,si coincide
-      if ( newList[i].id === id) { //con la misma id que se le pasa borra este elemento (desde posicion i, elimina 1 elemento)
-        newList.splice(i, 1); 
+      if ( newList[i].id === id) { 
+        if( newList[i].count != 1){
+          newList[i].count--;
+          newList[i].value = newList[i].value - (newList[i].value /newList[i].count );
+          return this.setState({list:newList})
+        }
+        newList.splice(i, 1); //con la misma id que se le pasa borra este elemento (desde posicion i, elimina 1 elemento)
       }
     }
    this.setState({list:newList}) //remplaza la list con la newList modificada
