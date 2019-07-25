@@ -5,6 +5,7 @@ import './index.css';
 import MenuView from './views/MenuView';
 import KitchenView from './views/KitchenView';
 import * as serviceWorker from './serviceWorker';
+import OrdersReadyView from './views/OrdersReadyView';
 
 
 const routing = (
@@ -12,6 +13,7 @@ const routing = (
     <div>
       <Route exact path="/" component={MenuView} />
       <Route path="/Kitchen" component={KitchenView} />
+      <Route path="/OrdersReady" component={OrdersReadyView} />
       
     </div>
   </Router>
