@@ -19,7 +19,7 @@ render(){
         </div>
         <div className="menu-center-col">
             <ul className="menu-ul-row">
-                <li className={this.props.state === 'menu' ? 'btn-selected-navbar' : 'menu-ul'}><Link to="/">MENÚ</Link></li>
+                <li className={this.props.state === 'menu' ? 'btn-selected-navbar' : 'menu-ul'}><Link to={process.env.PUBLIC_URL + '/'}>MENÚ</Link></li>
                 <li className={this.props.state === 'kitchen' ? 'btn-selected-navbar' : 'menu-ul'}><Link to="/Kitchen">COCINA</Link></li>
                 <li className={this.props.state === 'ordersReady' ? 'btn-selected-navbar' : 'menu-ul'}><Link to="/OrdersReady">PEDIDOS LISTOS</Link></li>
                 <li className="menu-ul"><Link to="/">HISTORIAL</Link></li>
