@@ -124,7 +124,6 @@ let idClient =this.state.client + Date.now();
                 <div className="btn-send-col">
                   <button className="btn-aside" onClick={this.saveOrder}>ENVIAR </button>
                 </div>
-                
               </footer>
               </div>
             </aside>
