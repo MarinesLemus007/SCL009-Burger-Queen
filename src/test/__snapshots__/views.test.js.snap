@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componentes existentes en MenuView,KitchenView,RecordView y OrdersReadyView se renderea correctamente el componente MenuView 1`] = `
+<Fragment>
+  <Navbar
+    state="menu"
+  />
+  <div
+    className="content-row"
+  >
+    <section
+      className="button-content-col"
+    >
+      <div
+        className="category-btn-row"
+      >
+        <CategoryBtn
+          className="btnCategory"
+          key="Desayunos"
+          name="DESAYUNOS"
+          view={[Function]}
+        />
+        <CategoryBtn
+          className="btnCategory"
+          key="Almuerzos"
+          name="ALMUERZOS"
+          view={[Function]}
+        />
+      </div>
+    </section>
+    <aside
+      className="side-content-col"
+    >
+      <div
+        className="aside-content"
+      >
+        <div
+          className="line-order"
+        >
+          <p>
+            PEDIDO
+          </p>
+          <p
+            className="error-msg"
+          />
+        </div>
+        <OrderName
+          changeClient={[Function]}
+          client=""
+        />
+        <div
+          className="order-content"
+        >
+          <Order
+            delete={[Function]}
+            list={Array []}
+          />
+        </div>
+        <footer
+          className="footer-side"
+        >
+          <div
+            className="btn-clear-col"
+          >
+            <button
+              className="btn-aside-clear"
+              onClick={[Function]}
+            >
+              LIMPIAR
+            </button>
+          </div>
+          <div
+            className="btn-send-col"
+          >
+            <button
+              className="btn-aside"
+              onClick={[Function]}
+            >
+              ENVIAR 
+            </button>
+          </div>
+           
+        </footer>
+      </div>
+    </aside>
+  </div>
+</Fragment>
+`;
+
+exports[`Componentes existentes en MenuView,KitchenView,RecordView y OrdersReadyView se renderea correctamente el componente OrdersReadyView 1`] = `
+<Fragment>
+  <Navbar
+    state="ordersReady"
+  />
+  <div
+    className="order-ready-container"
+  >
+    <h4>
+      PEDIDOS LISTOS PARA ENTREGAR
+    </h4>
+    <OrderDeliveryTemplate
+      changeReadyStatus={[Function]}
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Componentes existentes en MenuView,KitchenView,RecordView y OrdersReadyView se renderea correctamente el componente RecordView 1`] = `
+<Fragment>
+  <Navbar
+    state="record"
+  />
+  <div
+    className="order-record-container"
+  >
+    <h4>
+      HISTORIAL
+    </h4>
+    <OrderRecordTemplate />
+  </div>
+</Fragment>
+`;

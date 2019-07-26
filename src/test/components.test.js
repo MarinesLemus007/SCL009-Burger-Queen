@@ -1,14 +1,21 @@
 import React from 'react';
-import { configure , shallow , mount , Enzyme} from 'enzyme';
+import { configure , shallow , mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import MenuView from '../views/MenuView'
 import LunchBtn from '../components/LunchBtn'
+<<<<<<< HEAD
 import Btn from '../components/Btn'
+=======
+>>>>>>> b1f7913b807eed429ee47223ea9cf615e1eee423
 import CategoryBtn from '../components/CategoryBtn';
 import OrderTemplate from '../components/OrderTemplate'
-import Order from '../components/Order';
 import OrderName from '../components/OrderName';
 import OrderElement from '../components/OrderElement';
+import OrderRecordTemplate from '../components/OrderRecordTemplate';
+import toJson from 'enzyme-to-json';
+import OrderDeliveryTemplate from '../components/OrderDeliveryTemplate';
+import Navbar from '../components/Navbar';
+import Btn from '../components/Btn';
 
 configure({ adapter: new Adapter() });
 
@@ -37,12 +44,6 @@ describe('<OrderElement/>', () => {
         expect(wrapper.find(OrderElement)).toBeDefined();
     });
   });
-describe('<Btn/>', () => {
-    test('deberia retornar que el componente existe y devuelve un valor', () => {
-        const wrapper = shallow(<Btn/>);
-        expect(wrapper.exists()).toBe(true);
-    });
-  });
   describe('<OrderTemplate/>', () => {
     test('deberia retornar que el componente existe y devuelve un valor', () => {
         const wrapper = mount(<OrderTemplate/>);
@@ -55,13 +56,8 @@ describe('<Btn/>', () => {
         expect(wrapper.exists()).toBe(true);
     });
   });
-  describe('<Order/>', () => {
-    test('deberia retornar que el componente existe devuelve un valor', () => {
-        const wrapper = shallow(<Order/>);
-        // expect(wrapper.exists()).toBe(true);
-         expect(wrapper.find(Order)).toBeDefined();
-    });
-  });
+ 
+
 
 it('deberia ejecutar saveOrder para el boton enviar con la clase dada ', () => {  
     const wrapper = shallow(<MenuView />) //Menuview es el nombre del componente
@@ -69,24 +65,33 @@ it('deberia ejecutar saveOrder para el boton enviar con la clase dada ', () => {
     buttonComponent.filter('.btn-aside').simulate('click') //'.btn-aside' es  la clase de mi boton
     expect(wrapper.state); 
 });
-it('Debería devolver categoria almuerzo al clickear ', () => {
-    const wrapper = shallow(<CategoryBtn/>);
-    wrapper.find('.btnCategory').at(1).simulate('click')
-    expect(wrapper.state);
-  });
-  it('Debería devolver categoria desayuno al clickear  ', () => {
-    const wrapper = shallow(<CategoryBtn/>);
-    wrapper.find('.btnCategory').at(0).simulate('click')
-    expect(wrapper.state);
-  });
+
 
   describe('CategoryBtn', () => {
     it('Debería existir el componente <CategoryBtn />', () => {
       const wrapper = shallow(<CategoryBtn/>);
       expect(wrapper.exists()).toBe(true);
     });
-});it('Debería devolver categoria almuerzo al clickear ', () => {
-  const wrapper = shallow(<CategoryBtn/>);
-  wrapper.find('.btnCategory').at(1).simulate('click')
-  expect(wrapper.state);
 });
+
+it('se renderea correctamente el componente OrderTemplate', () => {  
+  const component = shallow(<OrderTemplate />);
+  expect(toJson(component)).toMatchSnapshot();
+});
+it('se renderea correctamente el componente OrderRecordTemplate', () => {  
+  const component = shallow(<OrderRecordTemplate />);
+  expect(toJson(component)).toMatchSnapshot();
+});
+it('se renderea correctamente el componente OrderRecordTemplate', () => {  
+  const component = shallow(<OrderDeliveryTemplate />);
+  expect(toJson(component)).toMatchSnapshot();
+});
+it('se renderea correctamente el componente Navbar', () => {  
+  const component = shallow(<Navbar />);
+  expect(toJson(component)).toMatchSnapshot();
+});
+it('se renderea correctamente el componente Btn', () => {  
+  const component = shallow(<Btn name="hola"/>);
+  expect(toJson(component)).toMatchSnapshot();
+});
+
