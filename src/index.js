@@ -6,6 +6,7 @@ import MenuView from './views/MenuView';
 import KitchenView from './views/KitchenView';
 import * as serviceWorker from './serviceWorker';
 import OrdersReadyView from './views/OrdersReadyView';
+import RecordView from './views/RecordView';
 
 
 const routing = (
@@ -14,6 +15,7 @@ const routing = (
       <Route exact path={process.env.PUBLIC_URL + '/'} component={MenuView} />
       <Route path='/Kitchen' component={KitchenView} />
       <Route path="/OrdersReady" component={OrdersReadyView} />
+      <Route path="/Record" component={RecordView} />
       
     </div>
   </Router>

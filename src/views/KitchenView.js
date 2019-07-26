@@ -43,8 +43,8 @@ class KitchenView extends React.Component{
         return (
             <>
             <Navbar state={this.state.selectedNavbar}/>
-            <div>
-                <p>Pedidos para cocinar</p>
+            <div className="kitchen-container">
+                <h4>PEDIDOS PARA COCINAR</h4>
                 <OrderTemplate changeReadyStatus={this.changeReadyStatus} data={data}/>
             </div>
             </>

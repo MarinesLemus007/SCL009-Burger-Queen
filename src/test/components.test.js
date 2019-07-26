@@ -1,12 +1,10 @@
 import React from 'react';
-import { configure , shallow , mount , Enzyme} from 'enzyme';
+import { configure , shallow , mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import MenuView from '../views/MenuView'
 import LunchBtn from '../components/LunchBtn'
-import Btn from '../components/Btn'
 import CategoryBtn from '../components/CategoryBtn';
 import OrderTemplate from '../components/OrderTemplate'
-import Order from '../components/Order';
 import OrderName from '../components/OrderName';
 import OrderElement from '../components/OrderElement';
 
@@ -37,12 +35,6 @@ describe('<OrderElement/>', () => {
         expect(wrapper.find(OrderElement)).toBeDefined();
     });
   });
-describe('<Btn/>', () => {
-    test('deberia retornar que el componente existe y devuelve un valor', () => {
-        const wrapper = shallow(<Btn/>);
-        expect(wrapper.exists()).toBe(true);
-    });
-  });
   describe('<OrderTemplate/>', () => {
     test('deberia retornar que el componente existe y devuelve un valor', () => {
         const wrapper = mount(<OrderTemplate/>);
@@ -55,13 +47,8 @@ describe('<Btn/>', () => {
         expect(wrapper.exists()).toBe(true);
     });
   });
-  describe('<Order/>', () => {
-    test('deberia retornar que el componente existe devuelve un valor', () => {
-        const wrapper = shallow(<Order/>);
-        // expect(wrapper.exists()).toBe(true);
-         expect(wrapper.find(Order)).toBeDefined();
-    });
-  });
+ 
+
 
 it('deberia ejecutar saveOrder para el boton enviar con la clase dada ', () => {  
     const wrapper = shallow(<MenuView />) //Menuview es el nombre del componente
@@ -76,14 +63,4 @@ it('deberia ejecutar saveOrder para el boton enviar con la clase dada ', () => {
       const wrapper = shallow(<CategoryBtn/>);
       expect(wrapper.exists()).toBe(true);
     });
-    it('Debería devolver categoria desayuno al clickear  ', () => {
-      const wrapper = shallow(<MenuView/>);
-      wrapper.find('.btnCategory').at(0).simulate('click')
-      expect(wrapper.state).toMatchSnapshot()
-    });
- });
- it('Debería devolver categoria almuerzo al clickear ', () => {
-  const wrapper = shallow(<MenuView/>);
-  wrapper.find('.btnCategory').at(1).simulate('click')
-  expect(wrapper).toMatchSnapshot();
 });

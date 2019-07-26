@@ -4,9 +4,14 @@
 # Burger Queen 🍔 
 
 ## Introducción 📍 
+
  *Burguer Queen* es una interfaz que permite a un local de comida , atrás quedaron lapiz y papel para anotar las ordenes de los clientes ! . Con *Burguer Queen* podrás obtener de manera rapida el guardado de los pedidos de los clientes , mediante el mesero , quien utulizará la plataforma en la comodidad de un tablet o celular , puesto que *Burguer Queen* es *responsive* , lo que quiere decir que se adapta a cualquier dispositivo movil.
 
   ![hambur](https://images.squarespace-cdn.com/content/v1/542f7d65e4b08599ba187f49/1549260066660-HM0M48TWO2R7R46MRPMQ/ke17ZwdGBToddI8pDm48kJK4Mm1kch8SFO9ZNkN1NT97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmoW6VMYd7DRFXOxjGuORbJVRIz_X6uKxhFE9bwG5-diIJ9kj42L3XbtP_RiBprpp_/Burger.gif?format=300w)
+
+ Visualiza nuestra aplicación en el siguiente enlace
+
+ [Proyecto github](https://cloiw.github.io/SCL009-Burger-Queen/)
 
  ## Descripción 📜
 
@@ -69,6 +74,8 @@ Para ser más eficaz a la hora de testear nuestra aplicación además de hacer t
 
 El testeo con usuarios incluyo además feedbacks hacía el producto , a continuación les dejamos un testeo real con un usuario , para escuchar el audio pincha [*aquí*](https://drive.google.com/file/d/1QtC0sxwA9o50F6iFUenDnI75X8EaDyNn/view)
 
+Como conclusión a los testeos , nos arrojaron buenas noticias , estaremos incluyendo todos los feedbacks recibidos por parte de nuestros usuarios en nuestra proxima versión .
+
 
 ## Tecnologías usadas para la creación de Burguer Queen 🖥
 
@@ -78,9 +85,7 @@ versión 16.0.6.
 
 * Testeamos nuestro código con testeos unitarios , para aquellos ocupamos [Enzyme](https://airbnb.io/enzyme/) , el que nos permitió testear componentes y pricipalmente botones y sus funcionalidades , detatectando así errores a tiempo .
 
-* Nuestra interfaz esta hecha en tiempo real , para que las ordenes y se carguen de manera instantanea  , por lo que para almacenar estos datos [Firebase](https://es.wikipedia.org/wiki/Firebase) 6.3.1 . Especificamente el sistema de colección de data de firebase llamada [database](https://firebase.google.com/docs/database/?hl=es-419).
-
-
+* Nuestra interfaz esta hecha en tiempo real , para que las ordenes se carguen de manera instantanea  , por lo que para almacenar estos datos usamos [Firebase](https://es.wikipedia.org/wiki/Firebase) 6.3.1 . Especificamente el sistema de colección de data de firebase llamada [Cloud Firestore](https://firebase.google.com/docs/database/?hl=es-419).
 
 
 

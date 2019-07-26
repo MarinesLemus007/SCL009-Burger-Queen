@@ -16,7 +16,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "eslint": "eslint --ext .js ./",
+    "eslint": "eslint --ext .js ./src",
     "pretest": "npm run eslint"
   },
   "homepage": "https://cloiw.github.io/SCL009-Burger-Queen",
