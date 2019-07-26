@@ -12,7 +12,7 @@ class RecordView extends React.Component{
 
 
     componentDidMount() {
-        db.collection("ordenes").where("record", "==", true).onSnapshot((querySnapshot)=>{
+        db.collection("ordenes").where("record", "==", true).orderBy("time","desc").onSnapshot((querySnapshot)=>{
             this.setState({
                 data: querySnapshot.docs.map(doc =>{       
                     return {data: doc.data()}
@@ -30,15 +30,12 @@ class RecordView extends React.Component{
             <>
             <Navbar state={this.state.selectedNavbar}/>
        
-        <div>
-        
-        <p>Historial</p>
-              <OrderRecordTemplate data={data}/>
-        
-        
-        
-        </div>
-    </>)
+            <div className='order-record-container'>
+                <h4>HISTORIAL</h4>
+                <OrderRecordTemplate data={data}/>
+            </div>
+            </>
+        )
     }
 }
 
