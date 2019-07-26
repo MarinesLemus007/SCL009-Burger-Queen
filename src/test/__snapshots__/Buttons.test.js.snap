@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Debería devolver categoria almuerzo al clickear  1`] = `Array []`;
+
+exports[`Debería devolver categoria desayuno al clickear   1`] = `Array []`;
+
+exports[`Debería encontrar la funcion ClearOrder al clickear  1`] = `[Function]`;
+
+exports[`Debería encontrar la funcion ClearOrder al clickear  2`] = `[Function]`;

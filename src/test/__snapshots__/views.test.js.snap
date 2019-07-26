@@ -15,11 +15,13 @@ exports[`Componentes existentes en MenuView,KitchenView,RecordView y OrdersReady
         className="category-btn-row"
       >
         <CategoryBtn
+          className="btnCategory"
           key="Desayunos"
           name="DESAYUNOS"
           view={[Function]}
         />
         <CategoryBtn
+          className="btnCategory"
           key="Almuerzos"
           name="ALMUERZOS"
           view={[Function]}

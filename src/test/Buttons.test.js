@@ -3,7 +3,6 @@ import { configure , shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import MenuView from '../views/MenuView'
 import OrderName from '../components/OrderName';
-import OrderDeliveryTemplate from '../components/OrderDeliveryTemplate';
 
 
 configure({ adapter: new Adapter() });
@@ -40,10 +39,4 @@ describe('< orderName/>', () => {
         expect(wrapper.exists('input')).toBe(true);
     });
   });
-  describe('<OrderDeliveryTemplate/>', () => {
-    test('deberia retornar que el input existe devuelve un valor', () => {
-        const wrapper = shallow(<OrderDeliveryTemplate/>);
-        expect(wrapper.exists('button')).toBe(true);
-    });
-  });
-
+  
