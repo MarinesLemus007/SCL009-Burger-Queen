@@ -15,7 +15,7 @@ class MenuView extends React.Component{
   constructor(props){
     super(props)
    
-    this.state = {list: [], client:"",selectedNavbar:'menu',errorMsg:''};
+    this.state = {list: [], client:"",selectedNavbar:'menu',errorMsg:'',loading:false};
     this.add = this.add.bind(this);
     this.delete = this.delete.bind(this);
     this.view = this.view.bind(this);
@@ -113,6 +113,9 @@ class MenuView extends React.Component{
         errorMsg:'Debe ingresar un nombre.'}) 
       return 
     }
+    this.setState({
+      loading:true
+    })
     let idClient =this.state.client + Date.now();
 
     let data=
@@ -126,6 +129,9 @@ class MenuView extends React.Component{
 
     db.collection("ordenes").doc(idClient).set(data)
     .then(() => {
+      this.setState({
+        loading:false
+      })
         this.clearOrder();
     })
 
@@ -158,14 +164,18 @@ class MenuView extends React.Component{
               <div className="order-content">
                 <Order list = {this.state.list} delete={this.delete}/>
               </div>
-              <footer className="footer-side">
+              
+                {!this.state.loading  ?
+                <footer className="footer-side">
                 <div className="btn-clear-col">
                   <button className="btn-aside-clear" onClick={this.clearOrder}>LIMPIAR</button>
                 </div>
                 <div className="btn-send-col">
                   <button className="btn-aside" onClick={this.saveOrder}>ENVIAR </button>
-                </div>
-              </footer>
+                </div> </footer>: <footer><p>Cargando . . .</p></footer> }
+                
+                
+              
               </div>
             </aside>
           </div>

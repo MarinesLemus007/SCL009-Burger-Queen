@@ -135,7 +135,7 @@ header {
 .btn,.btn-item,.btn-selected-category{
   padding: 30px;
   color: #F1F1F1;
-  background-color: rgb(182, 168, 187);
+  background-color: rgb(153, 128, 160);
   border-radius: 25px;
   border-style:none;
   margin:10px;
@@ -215,7 +215,7 @@ header {
   font-family: 'Rubik', sans-serif;
   
 }
-.line-order p{
+.line-order p,footer > p{
   text-align: center;
   color: rgb(103, 70, 160);
   font-weight: bold;
