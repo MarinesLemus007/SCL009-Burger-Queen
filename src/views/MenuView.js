@@ -110,7 +110,7 @@ class MenuView extends React.Component{
   saveOrder(){
     if(this.state.client === ""){
       this.setState({
-        errorMsg:'Debe ingresar un nombre.'}) 
+        errorMsg:'Debes ingresar un nombre.'}) 
       return 
     }
     this.setState({

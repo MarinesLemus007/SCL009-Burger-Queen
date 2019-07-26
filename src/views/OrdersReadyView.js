@@ -12,7 +12,7 @@ class OrdersReadyView extends React.Component{
 
 
     componentDidMount() {
-        db.collection("ordenes").where("not_delivered", "==", true).onSnapshot((querySnapshot)=>{
+        db.collection("ordenes").where("not_delivered", "==", true).orderBy("time","asc").onSnapshot((querySnapshot)=>{
             this.setState({
                 data: querySnapshot.docs.map(doc =>{       
                     return {data: doc.data()}
@@ -39,16 +39,12 @@ class OrdersReadyView extends React.Component{
         return (
             <>
             <Navbar state={this.state.selectedNavbar}/>
-       
-        <div>
-        
-        <p>Pedidos listos para entregar</p>
-              <OrderDeliveryTemplate changeReadyStatus={this.changeReadyStatus} data={data}/>
-        
-        
-        
-        </div>
-    </>)
+            <div className='order-ready-container'>
+                <h4>PEDIDOS LISTOS PARA ENTREGAR</h4>
+                <OrderDeliveryTemplate changeReadyStatus={this.changeReadyStatus} data={data}/>
+            </div>
+            </>
+        )
     }
 }
 
