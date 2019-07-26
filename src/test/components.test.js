@@ -7,6 +7,11 @@ import CategoryBtn from '../components/CategoryBtn';
 import OrderTemplate from '../components/OrderTemplate'
 import OrderName from '../components/OrderName';
 import OrderElement from '../components/OrderElement';
+import OrderRecordTemplate from '../components/OrderRecordTemplate';
+import toJson from 'enzyme-to-json';
+import OrderDeliveryTemplate from '../components/OrderDeliveryTemplate';
+import Navbar from '../components/Navbar';
+import Btn from '../components/Btn';
 
 configure({ adapter: new Adapter() });
 
@@ -64,3 +69,25 @@ it('deberia ejecutar saveOrder para el boton enviar con la clase dada ', () => {
       expect(wrapper.exists()).toBe(true);
     });
 });
+
+it('se renderea correctamente el componente OrderTemplate', () => {  
+  const component = shallow(<OrderTemplate />);
+  expect(toJson(component)).toMatchSnapshot();
+});
+it('se renderea correctamente el componente OrderRecordTemplate', () => {  
+  const component = shallow(<OrderRecordTemplate />);
+  expect(toJson(component)).toMatchSnapshot();
+});
+it('se renderea correctamente el componente OrderRecordTemplate', () => {  
+  const component = shallow(<OrderDeliveryTemplate />);
+  expect(toJson(component)).toMatchSnapshot();
+});
+it('se renderea correctamente el componente Navbar', () => {  
+  const component = shallow(<Navbar />);
+  expect(toJson(component)).toMatchSnapshot();
+});
+it('se renderea correctamente el componente Btn', () => {  
+  const component = shallow(<Btn name="hola"/>);
+  expect(toJson(component)).toMatchSnapshot();
+});
+

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`se renderea correctamente el componente Btn 1`] = `
+<button
+  className="btn-item"
+  onClick={[Function]}
+>
+  HOLA
+</button>
+`;
+
+exports[`se renderea correctamente el componente Navbar 1`] = `
+<header>
+  <nav
+    className="menu-nav-row"
+  >
+    <div
+      className="menu-left-col"
+    >
+      <img
+        alt="logo"
+        className="menu-icon"
+        src="logo.png"
+      />
+    </div>
+    <div
+      className="menu-center-col"
+    >
+      <ul
+        className="menu-ul-row"
+      >
+        <li
+          className="menu-ul"
+        >
+          <Link
+            to="/"
+          >
+            MENÚ
+          </Link>
+        </li>
+        <li
+          className="menu-ul"
+        >
+          <Link
+            to="/Kitchen"
+          >
+            COCINA
+          </Link>
+        </li>
+        <li
+          className="menu-ul"
+        >
+          <Link
+            to="/OrdersReady"
+          >
+            PEDIDOS LISTOS
+          </Link>
+        </li>
+        <li
+          className="menu-ul"
+        >
+          <Link
+            to="/Record"
+          >
+            HISTORIAL
+          </Link>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="menu-right-col"
+    />
+  </nav>
+</header>
+`;
+
+exports[`se renderea correctamente el componente OrderRecordTemplate 1`] = `<p />`;
+
+exports[`se renderea correctamente el componente OrderRecordTemplate 2`] = `<p />`;
+
+exports[`se renderea correctamente el componente OrderTemplate 1`] = `<p />`;
