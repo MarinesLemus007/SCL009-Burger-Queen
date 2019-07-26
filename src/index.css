@@ -135,7 +135,7 @@ header {
 .btn,.btn-item,.btn-selected-category{
   padding: 30px;
   color: #F1F1F1;
-  background-color: #8A8889;
+  background-color: rgb(182, 168, 187);
   border-radius: 25px;
   border-style:none;
   margin:10px;
